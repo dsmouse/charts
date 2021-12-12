@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  sshd-test:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2021-12-11T22:16:04.156376024-05:00"
+    description: Deploy a basic  Linux  sshd pod
+    digest: 735a71f2e067b8017af5c195f5d637d658175cb9b6c662df48c9130e1f6aac72
+    name: sshd-test
+    type: application
+    urls:
+    - sshd-test-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-12-11T22:16:04.154871792-05:00"

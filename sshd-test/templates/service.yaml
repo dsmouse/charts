@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "sshd-test.fullname" . }}
+  labels:
+    {{- include "sshd-test.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      protocol: TCP
+      name: ssh
+      nodePort: {{ .Values.service.export }}
+  selector:
+    {{- include "sshd-test.selectorLabels" . | nindent 4 }}
